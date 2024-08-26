@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate")%>
+<body>
+  <div class="row">
+    <div class="col-8 offset-2">
+    <h3 style="margin-left: 210px;">Creating a New Listing: </h3>
+    
+    <form action="/listings" method="post"  novalidate class="needs-validation" >
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="listing[title]" placeholder="Enter  catchy Title"  required class="form-control"/>
+            <div class="valid-feedback">
+              Title looks good!
+            </div>
+        </div>
+        
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea  name="listing[description]" required placeholder="Enter Description" class="form-control"></textarea>
+        <div class="invalid-feedback">
+          Please enter a short description!
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="imgage" class="form-label" >Image Link</label>
+        <input type="text" name="listing[imgage]"placeholder="enter.Image/URL/LINK"
+         class="form-control">
+      </div>
+       
+        <div class="mb-3">
+            <label for="price" class="form-label" >Price</label>
+            <input type="number" name="listing[price]" required placeholder="1200" class="form-control">
+
+            <div class="invalid-feedback">
+              Price Should be Valid!
+            </div>
+        </div>
+      
+        <div class="mb-3">
+            <label for="location" class="form-label" >Location</label>
+            <input  name="listing[location]" placeholder="Nepal" required class="form-control" >
+
+            <div class="invalid-feedback">
+              location Should be valid!
+            </div>
+        </div>
+        <br><br>
+        <button class="btn btn-dark add-btn">Add</button>
+    </form>
+</div>
+</div>
+</body>
